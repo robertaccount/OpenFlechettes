@@ -15,6 +15,10 @@ android {
         versionName "1.0.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        
+        // Désactive AAPT2 pour éviter les problèmes de compilation (temporaire)
+        // aaptOptions.cruncherEnabled = false
+        // aaptOptions.additionalParameters "--auto-add-overlay"
     }
 
     buildTypes {
