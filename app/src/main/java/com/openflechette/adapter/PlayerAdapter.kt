@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.CheckBox
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.openflechette.R
 import com.openflechette.model.Player
 
 class PlayerAdapter(

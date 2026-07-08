@@ -7,6 +7,7 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.openflechette.R
 import com.openflechette.adapter.ResultsAdapter
 import com.openflechette.viewmodel.GameViewModel
 
