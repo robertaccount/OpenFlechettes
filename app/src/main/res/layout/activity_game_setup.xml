@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".view.GameSetupActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Configuration de la Partie"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Mode de jeu -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mode de jeu"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+        
+        <Spinner
+            android:id="@+id/spinnerGameMode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Check In -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check In"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+        
+        <Spinner
+            android:id="@+id/spinnerCheckIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Check Out -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check Out"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+        
+        <Spinner
+            android:id="@+id/spinnerCheckOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Nombre de manches -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nombre de manches"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+        
+        <Spinner
+            android:id="@+id/spinnerLegs"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Ajout de joueurs -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Joueurs"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/editTextPlayerName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Nom du joueur"
+                android:inputType="textPersonName"/>
+
+            <CheckBox
+                android:id="@+id/checkBoxIsBot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bot"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center_vertical"/>
+
+            <Button
+                android:id="@+id/btnAddPlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ajouter"
+                android:layout_marginStart="8dp"
+                android:textAllCaps="false"/>
+        </LinearLayout>
+
+        <!-- Liste des joueurs -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPlayers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:maxHeight="300dp"/>
+
+        <!-- Bouton pour démarrer -->
+        <Button
+            android:id="@+id/btnStartGame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Démarrer la Partie"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+</ScrollView>

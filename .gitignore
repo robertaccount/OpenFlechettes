@@ -1,0 +1,52 @@
+# Android
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+/output.json
+
+# Android Studio
+*.iml
+.idea
+
+# Gradle
+.gradle
+build/
+
+# Local properties
+local.properties
+
+# Keystore files
+*.jks
+*.keystore
+
+# Signing files
+*.signing
+
+# Native build folder
+.externalNativeBuild
+
+# CMake build directory
+CMakeFiles
+CMakeCache.txt
+
+# NDK
+obj/
+
+# IntelliJ
+*.iml
+.idea/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db

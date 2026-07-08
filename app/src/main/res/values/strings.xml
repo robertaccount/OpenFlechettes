@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">OpenFlechettes</string>
+    
+    <!-- Game Setup -->
+    <string name="game_setup_title">Configuration de la Partie</string>
+    <string name="game_mode_label">Mode de jeu</string>
+    <string name="check_in_label">Check In</string>
+    <string name="check_out_label">Check Out</string>
+    <string name="legs_label">Nombre de manches</string>
+    <string name="players_label">Joueurs</string>
+    <string name="player_name_hint">Nom du joueur</string>
+    <string name="is_bot_label">Bot</string>
+    <string name="add_player_button">Ajouter</string>
+    <string name="start_game_button">Démarrer la Partie</string>
+    
+    <!-- Game -->
+    <string name="current_player_label">Joueur: </string>
+    <string name="remaining_points_label">Points restants: </string>
+    <string name="current_throw_label">Lancer: </string>
+    <string name="start_game">Démarrer</string>
+    <string name="undo_button">Annuler</string>
+    <string name="miss_button">Miss</string>
+    <string name="end_game_button">Terminer la Partie</string>
+    
+    <!-- Results -->
+    <string name="results_title">Résultats de la Partie</string>
+    <string name="winner_label">Gagnant: </string>
+    <string name="player_stats_title">Statistiques des Joueurs</string>
+    <string name="new_game_button">Nouvelle Partie</string>
+    <string name="main_menu_button">Menu Principal</string>
+    
+    <!-- Main Menu -->
+    <string name="new_game">Nouvelle Partie</string>
+    <string name="continue_game">Continuer une Partie</string>
+    <string name="statistics">Statistiques</string>
+    <string name="settings">Paramètres</string>
+    
+    <!-- Errors -->
+    <string name="error_min_players">Veuillez ajouter au moins 2 joueurs</string>
+    <string name="error_game_not_started">Veuillez d'abord démarrer la partie</string>
+    <string name="error_bot_turn">C\'est au tour d\'un bot</string>
+</resources>

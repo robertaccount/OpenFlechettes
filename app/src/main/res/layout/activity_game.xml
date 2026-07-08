@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp"
+    tools:context=".view.GameActivity">
+
+    <!-- En-tête avec infos de la partie -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/textViewCurrentPlayer"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Joueur: "
+            android:textSize="16sp"
+            android:textColor="@android:color/white"/>
+
+        <TextView
+            android:id="@+id/textViewRemainingPoints"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Points restants: 501"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/textViewCurrentThrow"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Lancer: 1/3"
+            android:textSize="16sp"
+            android:textColor="@android:color/white"
+            android:gravity="end"/>
+    </LinearLayout>
+
+    <!-- Liste des joueurs et scores -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerViewPlayers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:maxHeight="150dp"/>
+
+    <!-- Boutons de score -->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="6"
+        android:rowCount="11"
+        android:layout_marginBottom="8dp">
+
+        <!-- Ligne 1: 1-6 -->
+        <Button
+            android:id="@+id/btnScore1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="1"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="2"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="3"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="4"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="5"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore6"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:text="6"
+            android:textAllCaps="false"/>
+
+        <!-- Ligne 2: 7-12 -->
+        <Button
+            android:id="@+id/btnScore7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="1"
+            android:text="7"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore8"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="1"
+            android:text="8"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore9"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="1"
+            android:text="9"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore10"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="1"
+            android:text="10"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore11"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="1"
+            android:text="11"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="1"
+            android:text="12"
+            android:textAllCaps="false"/>
+
+        <!-- Ligne 3: 13-18 -->
+        <Button
+            android:id="@+id/btnScore13"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="2"
+            android:text="13"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore14"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="2"
+            android:text="14"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore15"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="2"
+            android:text="15"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore16"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="2"
+            android:text="16"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore17"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="2"
+            android:text="17"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore18"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="2"
+            android:text="18"
+            android:textAllCaps="false"/>
+
+        <!-- Ligne 4: 19-24 -->
+        <Button
+            android:id="@+id/btnScore19"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="3"
+            android:text="19"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore20"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="3"
+            android:text="20"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore21"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="3"
+            android:text="21"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore22"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="3"
+            android:text="22"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore23"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="3"
+            android:text="23"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore24"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="3"
+            android:text="24"
+            android:textAllCaps="false"/>
+
+        <!-- Ligne 5: 25-30 -->
+        <Button
+            android:id="@+id/btnScore25"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="4"
+            android:text="25"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore26"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="4"
+            android:text="26"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore27"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="4"
+            android:text="27"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore28"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="4"
+            android:text="28"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore29"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="4"
+            android:text="29"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore30"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="4"
+            android:text="30"
+            android:textAllCaps="false"/>
+
+        <!-- Ligne 6: 31-36 -->
+        <Button
+            android:id="@+id/btnScore31"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="5"
+            android:text="31"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore32"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="5"
+            android:text="32"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore33"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="5"
+            android:text="33"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore34"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="5"
+            android:text="34"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore35"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="5"
+            android:text="35"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore36"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="5"
+            android:text="36"
+            android:textAllCaps="false"/>
+
+        <!-- Ligne 7: 37-42 -->
+        <Button
+            android:id="@+id/btnScore37"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="6"
+            android:text="37"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore38"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="6"
+            android:text="38"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore39"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="6"
+            android:text="39"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore40"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="6"
+            android:text="40"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore41"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="6"
+            android:text="41"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore42"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="6"
+            android:text="42"
+            android:textAllCaps="false"/>
+
+        <!-- Ligne 8: 43-48 -->
+        <Button
+            android:id="@+id/btnScore43"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="7"
+            android:text="43"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore44"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="7"
+            android:text="44"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore45"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="7"
+            android:text="45"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore46"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="7"
+            android:text="46"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore47"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="7"
+            android:text="47"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore48"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="7"
+            android:text="48"
+            android:textAllCaps="false"/>
+
+        <!-- Ligne 9: 49-54 -->
+        <Button
+            android:id="@+id/btnScore49"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="8"
+            android:text="49"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore50"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="8"
+            android:text="50"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore51"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="8"
+            android:text="51"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore52"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="8"
+            android:text="52"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore53"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="8"
+            android:text="53"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore54"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="8"
+            android:text="54"
+            android:textAllCaps="false"/>
+
+        <!-- Ligne 10: 55-60 -->
+        <Button
+            android:id="@+id/btnScore55"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="9"
+            android:text="55"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore56"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="9"
+            android:text="56"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore57"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="9"
+            android:text="57"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore58"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="9"
+            android:text="58"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore59"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="9"
+            android:text="59"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnScore60"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="9"
+            android:text="60"
+            android:textAllCaps="false"/>
+
+        <!-- Ligne 11: Miss et Start/Undo -->
+        <Button
+            android:id="@+id/btnMiss"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="10"
+            android:layout_columnSpan="2"
+            android:text="Miss"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnStartGame"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="10"
+            android:layout_columnSpan="2"
+            android:text="Démarrer"
+            android:textAllCaps="false"/>
+        
+        <Button
+            android:id="@+id/btnUndo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_columnWeight="1"
+            android:layout_rowWeight="1"
+            android:layout_row="10"
+            android:layout_columnSpan="2"
+            android:text="Annuler"
+            android:textAllCaps="false"/>
+
+    </GridLayout>
+
+    <!-- Bouton pour terminer la partie -->
+    <Button
+        android:id="@+id/btnEndGame"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Terminer la Partie"
+        android:textAllCaps="false"
+        android:layout_marginTop="8dp"/>
+
+</LinearLayout>
